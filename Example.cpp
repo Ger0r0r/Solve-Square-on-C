@@ -22,8 +22,6 @@ int isZero (double value);
     checking a variable for zero by comparing it with zero with a certain precision (const - Prec_isZero)
 */
 
-void Test_isZero ();
-
 //----------------------------------------------------------------------------------------------------
 
 int main ()
@@ -46,6 +44,7 @@ int main ()
         printf ("Sum of answers: %+lg\n", (x1+x2));
         }
 
+    return 0;
     }
 
 //----------------------------------------------------------------------------------------------------
@@ -76,7 +75,7 @@ int SovleSquare (double a, double b, double c, double* ans1, double* ans2)
         *ans1 = -b/(2*a);
         *ans2 = *ans1;
 
-        printf ("Answer: x1 = x2 = %+lg\n", *ans1);
+        printf ("Answer: \n x1 = x2 = %+lg\n", *ans1);
 
         return 1;
         }
@@ -93,6 +92,8 @@ int SovleSquare (double a, double b, double c, double* ans1, double* ans2)
         return 2;
         }
 
+    printf ("Non-standard discriminant value");
+    return 0;
     }
 
 //----------------------------------------------------------------------------------------------------
@@ -100,12 +101,4 @@ int SovleSquare (double a, double b, double c, double* ans1, double* ans2)
 int isZero (double value)
     {
     return (fabs (value) < Prec_isZero);
-    }
-
-void Tesr_isZero ()
-    {
-    int result = isZero (0);
-
-    if (result == 1)     printf ("Test #1 OK\n");
-    else                 printf ("Test #1 BAD: isZero (0) == %d, should be 1 %lg\n", result);
     }
