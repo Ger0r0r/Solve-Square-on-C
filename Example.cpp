@@ -11,8 +11,8 @@
 int SovleSquare (double a, double b, double c, double* ans1, double* ans2);
 
 /*  function SolveSquare:
-    a, b ,c    - coefficients of square equation(SE)
-    ans1, ans2 - address of answers of SE
+    a, b ,c    - coefficients of square equation
+    ans1, ans2 - address of answers of square equation
     return     - answer amount
 */
 
